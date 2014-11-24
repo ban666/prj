@@ -1,0 +1,3 @@
+import te
+
+print tea(1,2)

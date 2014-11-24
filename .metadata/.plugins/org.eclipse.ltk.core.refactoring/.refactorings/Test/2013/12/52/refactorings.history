@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename source module &apos;SetResult.lib.tcl&apos; to &apos;SetResult.tcl&apos;&#x0D;&#x0A;- Original element: &apos;SetResult.lib.tcl&apos;&#x0D;&#x0A;- Renamed element: &apos;SetResult.tcl&apos;" description="Rename source module &apos;SetResult.lib.tcl&apos;" flags="589830" id="org.eclipse.dltk.ui.rename.sourcemodule" input="/LIB&lt;{SetResult.lib.tcl" name="SetResult.tcl" stamp="1388221652147" version="1.0"/>
+</session>

@@ -1,0 +1,94 @@
+#Tcl interpreter builtins for:C:/Tcl/bin/tclsh86.exe
+
+
+#Procedures
+proc auto_load_index {} {}
+proc unknown {args} {}
+proc auto_import {pattern} {}
+proc auto_execok {name} {}
+proc clock {args} {}
+proc auto_qualify {cmd namespace} {}
+proc auto_load {cmd namespace} {}
+proc tclLog {string} {}
+
+
+#Variables
+set tcl_rcFileName ~/tclshrc.tcl
+set tcl_version 8.6
+set argv0 C:\Users\ban\AppData\Local\Temp\dltk61301.tmp\scripts\builtins.tcl
+set argv 
+set tcl_interactive 0
+set auto_path C:/Tcl/lib/tcl8.6 C:/Tcl/lib c:/tcl/lib/teapot/package/win32-x86_64/lib c:/tcl/lib/teapot/package/tcl/lib
+set errorCode TCL LOOKUP VARNAME ::tcl_pkgPath
+set errorInfo 
+set auto_index(tcl_startOfNextWord) source C:/Tcl/lib/tcl8.6/word.tcl
+set auto_index(::tcl::tm::add) source C:/Tcl/lib/tcl8.6/tm.tcl
+set auto_index(::tcl::tm::path) source C:/Tcl/lib/tcl8.6/tm.tcl
+set auto_index(::safe::Subset) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(parray) source C:/Tcl/lib/tcl8.6/parray.tcl
+set auto_index(::tcl::HistClear) source C:/Tcl/lib/tcl8.6/history.tcl
+set auto_index(::safe::interpCreate) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::safe::AliasEncoding) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::safe::interpFindInAccessPath) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::tcl::HistChange) source C:/Tcl/lib/tcl8.6/history.tcl
+set auto_index(pkg_mkIndex) source C:/Tcl/lib/tcl8.6/package.tcl
+set auto_index(::safe::interpConfigure) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::tcl::HistAdd) source C:/Tcl/lib/tcl8.6/history.tcl
+set auto_index(::safe::interpAddToAccessPath) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::safe::AddSubDirs) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(tcl_wordBreakAfter) source C:/Tcl/lib/tcl8.6/word.tcl
+set auto_index(::safe::FileInAccessPath) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(tcl_startOfPreviousWord) source C:/Tcl/lib/tcl8.6/word.tcl
+set auto_index(::pkg::create) source C:/Tcl/lib/tcl8.6/package.tcl
+set auto_index(::tcl::tm::roots) source C:/Tcl/lib/tcl8.6/tm.tcl
+set auto_index(::auto_mkindex_parser::commandInit) source C:/Tcl/lib/tcl8.6/auto.tcl
+set auto_index(::tcl::tm::Defaults) source C:/Tcl/lib/tcl8.6/tm.tcl
+set auto_index(::auto_mkindex_parser::slavehook) source C:/Tcl/lib/tcl8.6/auto.tcl
+set auto_index(::auto_mkindex_parser::init) source C:/Tcl/lib/tcl8.6/auto.tcl
+set auto_index(auto_mkindex) source C:/Tcl/lib/tcl8.6/auto.tcl
+set auto_index(auto_reset) source C:/Tcl/lib/tcl8.6/auto.tcl
+set auto_index(::tcl::HistIndex) source C:/Tcl/lib/tcl8.6/history.tcl
+set auto_index(::auto_mkindex_parser::cleanup) source C:/Tcl/lib/tcl8.6/auto.tcl
+set auto_index(::safe::InterpNested) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::tcl::HistRedo) source C:/Tcl/lib/tcl8.6/history.tcl
+set auto_index(tclPkgUnknown) source C:/Tcl/lib/tcl8.6/package.tcl
+set auto_index(::safe::interpInit) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::safe::PathToken) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::auto_mkindex_parser::fullname) source C:/Tcl/lib/tcl8.6/auto.tcl
+set auto_index(::safe::Log) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::safe::TranslatePath) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::safe::AliasSource) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::auto_mkindex_parser::command) source C:/Tcl/lib/tcl8.6/auto.tcl
+set auto_index(::safe::DirInAccessPath) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::safe::CheckFileName) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::tcl::HistInfo) source C:/Tcl/lib/tcl8.6/history.tcl
+set auto_index(::safe::CheckInterp) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::safe::SyncAccessPath) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::tcl::tm::list) source C:/Tcl/lib/tcl8.6/tm.tcl
+set auto_index(::safe::InterpCreate) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(auto_mkindex_old) source C:/Tcl/lib/tcl8.6/auto.tcl
+set auto_index(::safe::AliasLoad) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::safe::setLogCmd) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::auto_mkindex_parser::mkindex) source C:/Tcl/lib/tcl8.6/auto.tcl
+set auto_index(::safe::InterpStatics) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(tcl_wordBreakBefore) source C:/Tcl/lib/tcl8.6/word.tcl
+set auto_index(tclPkgSetup) source C:/Tcl/lib/tcl8.6/package.tcl
+set auto_index(tcl_findLibrary) source C:/Tcl/lib/tcl8.6/auto.tcl
+set auto_index(::tcl::HistKeep) source C:/Tcl/lib/tcl8.6/history.tcl
+set auto_index(::tcl::MacOSXPkgUnknown) source C:/Tcl/lib/tcl8.6/package.tcl
+set auto_index(tcl_endOfWord) source C:/Tcl/lib/tcl8.6/word.tcl
+set auto_index(history) source C:/Tcl/lib/tcl8.6/history.tcl
+set auto_index(::safe::InterpSetConfig) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::safe::interpDelete) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::auto_mkindex_parser::hook) source C:/Tcl/lib/tcl8.6/auto.tcl
+set auto_index(::tcl::HistEvent) source C:/Tcl/lib/tcl8.6/history.tcl
+set auto_index(::safe::InterpInit) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::safe::AliasGlob) source C:/Tcl/lib/tcl8.6/safe.tcl
+set auto_index(::tcl::tm::UnknownHandler) source C:/Tcl/lib/tcl8.6/tm.tcl
+set auto_index(::tcl::tm::remove) source C:/Tcl/lib/tcl8.6/tm.tcl
+set auto_index(::safe::AliasSubset) source C:/Tcl/lib/tcl8.6/safe.tcl
+set env(HOME) C:\Users\ban
+set env(ProgramData) C:\ProgramData
+set env(PROCESSOR_IDENTIFIER) Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+set env(JAVA_HOME) C:\Program Files\Java\jdk1.7.0_17
+set env(ComSpec) C:\Windows\system32\cmd.exe

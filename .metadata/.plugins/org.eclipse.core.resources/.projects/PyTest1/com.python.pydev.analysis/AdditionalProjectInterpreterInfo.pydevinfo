@@ -1,0 +1,38 @@
+-- VERSION_4
+-- START DISKCACHE
+D:\svn1\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\PyTest1\com.python.pydev.analysis\v2_indexcache
+Python27.te|0|D:\svn1\workspace\PyTest1\src\Python27\te.py
+Python27.__init__|0|D:\svn1\workspace\PyTest1\src\Python27\__init__.py
+Python27.c|0|D:\svn1\workspace\PyTest1\src\Python27\c.py
+Python27.test|0|D:\svn1\workspace\PyTest1\src\Python27\test.py
+Python27.Login|0|D:\svn1\workspace\PyTest1\src\Python27\Login.py
+-- END DISKCACHE
+-- START DICTIONARY
+6
+5=Untitled.setUp
+2=Python27.te
+3=Python27.c
+4=Python27.Login
+1=Python27.test
+6=Untitled
+-- END DICTIONARY
+-- START TREE 1
+7
+buf|1|buf!11@
+gr_|1|GR_Client!17@
+hos|1|host!27@
+p|1|p!27@
+s|1|s!27@
+soc|1|sock!11@
+unt|1|Untitled!33@
+-- END TREE
+-- START TREE 2
+7
+acc|1|accept_next_alert!5&35@
+bas|1|base_url!5&35@
+dri|1|driver!5&35@
+set|1|setUp!6&34@
+tea|1|tearDown!6&34@
+tes|1|test_untitled!6&34@
+ver|1|verificationErrors!5&35@
+-- END TREE

@@ -1,0 +1,24 @@
+
+#####################################################################
+# Telnet session to 40.1.1.6
+# Started: 01-07-14 10:07 AM
+#####################################################################
+Establish Telnet Link to 40.1.1.6
+Could not open socket to port telnet
+Error: couldn't open socket: connection timed out
+Session not open
+Session not open
+Session not open
+Session not open
+
+#####################################################################
+# Telnet session to 192.168.13.13
+# Started: 01-07-14 10:26 AM
+#####################################################################
+Establish Telnet Link to 192.168.13.13
+Could not open socket to port telnet
+Error: couldn't open socket: connection refused
+Session not open
+Session not open
+Session not open
+Session not open

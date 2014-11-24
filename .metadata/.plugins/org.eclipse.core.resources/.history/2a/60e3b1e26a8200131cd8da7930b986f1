@@ -1,0 +1,39 @@
+ 
+##############################################
+#建立Telnet连接,并登录,进入配置模式.
+##############################################
+set timeout -1
+#初始化（读取lib 读取全局变量）
+source "C:\\Users\\ban\\workspace\\Test\\init.tcl"
+
+#set dutip 1.1.1.1
+set ::CmdSendWait 500
+puts "Link to DUT"
+
+TelnetOpen $::dutip  "ban" "19820307qq"  -timeout 3   -logFile $::logFile -prompt "" -debug 1
+# -port 21      
+          
+#puts "\n "                
+
+
+###############################################
+##以下开始发送配置指令
+###############################################
+#set fid [open "command.txt"]
+#while {[gets $fid line] >=0} {
+#    TelnetSendCommand "$line"  
+#  }
+#puts " \n "
+
+TelnetSendCommand "ping www.baidu.com"
+TelnetSendCommand "dir"
+TelnetSendCommand "\n"
+TelnetSendCommand "exit"
+
+after 1000
+#close $fid
+TelnetClose
+###############################################
+#关闭Telnet连接
+##############################################
+

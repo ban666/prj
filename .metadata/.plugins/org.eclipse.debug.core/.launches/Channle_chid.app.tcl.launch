@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.dltk.tcl.launching.TCLLaunchConfigurationType">
+<stringAttribute key="console_id" value="dltk_1391994053774"/>
+<stringAttribute key="mainScript" value="Scripts/DHCP/Channle_chid.app.tcl"/>
+<stringAttribute key="nature" value="org.eclipse.dltk.tcl.core.nature"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Test"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<stringAttribute key="process_factory_id" value="org.eclipse.dltk.launching.scriptProcessFactory"/>
+<stringAttribute key="project" value="Test"/>
+<booleanAttribute key="use_dltk_interactive_console" value="false"/>
+</launchConfiguration>

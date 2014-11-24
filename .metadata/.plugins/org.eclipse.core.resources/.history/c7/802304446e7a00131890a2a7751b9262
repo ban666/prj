@@ -1,0 +1,37 @@
+
+proc Capture {interface filter SLocation duration tsharkpath {V 0}} {
+     set dir [pwd]
+     cd $tsharkpath
+	puts [pwd]
+	if {$V==1} {
+        set cmd [list exec tshark -i $interface -f $filter -a duration:$duration -V > $SLocation]
+	}
+	set cmd [list exec tshark -i $interface -f $filter -a duration:$duration > $SLocation]
+	puts $cmd
+        set Cap [catch {eval $cmd} msg]
+	puts $msg
+	cd $dir
+	return 1
+}
+
+proc Exsitcheck {filter file} {
+	set status 0
+	set Getfile [open $file RDONLY]
+	set Content [split [read $Getfile] \n]
+	foreach line $Content {
+		puts $line
+	   if {[regexp $filter $line]} {
+	      set status 1
+		   puts $status
+	   }		
+	}
+	return $status
+}
+
+set c "e:\\test\\2.txt"
+#set b [Capture 3 icmp $c 10 "c:\\program files\\wireshark"]
+#puts "b:$b"
+
+set d [Exsitcheck "Echo*reply" $c]
+puts $d
+

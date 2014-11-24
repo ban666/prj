@@ -1,0 +1,6 @@
+
+#coding=utf-8
+def tea(a 1,b 2):
+    print a 
+    print b
+    return 1

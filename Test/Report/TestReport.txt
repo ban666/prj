@@ -1,0 +1,8 @@
+head:add.h,eee.h,jjj.h
+func:function
+return:int
+p0:int,1501,1508
+p1:int,1509,1999
+p2:char,1500,1700
+Function:function
+参数个数:3

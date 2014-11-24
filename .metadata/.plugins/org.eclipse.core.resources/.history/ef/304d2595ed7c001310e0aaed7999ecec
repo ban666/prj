@@ -1,0 +1,21 @@
+#!/bin/sh
+# ftp.tcl \
+exec tclsh "$0" ${1+"$@"}
+
+catch {package require Itcl}
+catch {namespace import -force itcl::*}
+
+
+
+class a {
+	method b {c d} {
+		puts $c 
+		puts $d
+		return [expr $c+$d]
+	}
+}
+
+
+a bbbb
+set d [bbbb b [list 3 4]]
+puts $d

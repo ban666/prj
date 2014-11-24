@@ -1,0 +1,11 @@
+
+#coding=utf-8
+import sys
+import subprocess
+
+
+tmp = os.open('ping 192.168.20.1').readlines()
+
+
+tmp
+

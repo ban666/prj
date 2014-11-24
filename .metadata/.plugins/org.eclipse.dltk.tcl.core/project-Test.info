@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<pkg:TclProjectInfo xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:pkg="http://www.eclipse.org/dltk/tcl/packages" name="Test">
+  <modules handle="=Test/LIB&lt;{RCServer.tcl">
+    <required value="Itcl" start="33" end="37"/>
+  </modules>
+  <variables key="g_File">
+    <value value="e:\\Result.txt"/>
+  </variables>
+  <variables key="g_pro_location">
+    <value value="e:\\project\\"/>
+  </variables>
+</pkg:TclProjectInfo>

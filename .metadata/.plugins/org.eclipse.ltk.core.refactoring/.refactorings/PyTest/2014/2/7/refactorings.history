@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="将资源“PyTest/src/Python27/Scripts/DHCP/DhcpEdit.py 的副本”重命名为“DhcpEdit.py”" description="重命名资源“DhcpEdit.py 的副本”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Python27/Scripts/DHCP/DhcpEdit.py 的副本" name="DhcpEdit.py" stamp="1392277181154" updateReferences="true"/>&#x0A;<refactoring comment="将资源“PyTest/src/Python27/Scripts/DHCP”重命名为“DHCPConfig”" description="重命名资源“DHCP”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Python27/Scripts/DHCP" name="DHCPConfig" stamp="1392278765891" updateReferences="true"/>
+</session>

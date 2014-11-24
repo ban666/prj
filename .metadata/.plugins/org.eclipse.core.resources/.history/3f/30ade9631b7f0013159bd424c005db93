@@ -1,0 +1,3 @@
+#!/bin/sh
+# sshping.tcl \
+exec tclsh "$0" ${1+"$@"}

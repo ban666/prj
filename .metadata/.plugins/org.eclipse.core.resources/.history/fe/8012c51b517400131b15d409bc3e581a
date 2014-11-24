@@ -1,0 +1,112 @@
+package M100_AutoTest;
+
+import org.openqa.selenium.support.ui.Select;
+
+import static org.junit.Assert.*;
+
+import java.util.Iterator;
+import java.util.Set;
+
+import org.testng.annotations.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.thoughtworks.selenium.Selenium;
+public class IP_MacBind {
+
+	WebDriver driver;
+	  private String baseUrl;
+	  @BeforeMethod
+	  public void beforeMethod() throws InterruptedException {
+		  System.out.println("----AutoTestCase:IP_Mac Binding Start----\n\n"
+	 		  		+ "Step 1:Login\n"
+	 		  		+ "Step 2:Add Rule\n"
+	 		  		+ "Step 3:Edit Rule\n"
+	 		  		+ "Step 4:Bind Rule\n"
+	 		  		+ "Step 5:Unbind Rule\n"
+	 		  		+ "Step 6:Del Rule\n"
+	 		  		+ "Step 7:Logout\n"
+	 				  );
+		  driver = new FirefoxDriver();
+		    baseUrl = "https://192.168.13.13:8443";
+		    driver.get(baseUrl + "/");
+		    Thread.sleep(2000);
+	  }
+	  @AfterMethod
+	  public void afterMethod() {
+		  System.out.println("----AutoTestCase:Dos Attack Defend Config End----\n");
+	   
+	   driver.quit();
+	  }
+	  @Test
+	public void test4() throws InterruptedException {
+		    //Login
+		    driver.findElement(By.id("username")).clear();
+		    driver.findElement(By.id("username")).sendKeys("admin");
+		    driver.findElement(By.id("password")).clear();
+		    driver.findElement(By.id("password")).sendKeys("admin");
+		    driver.findElement(By.id("submit")).click();
+		    
+		    System.out.println("Step 1:Login Success\n");
+			Thread.sleep(2000);
+			
+			//Add Rule
+		    driver.findElement(By.id("n4")).click();
+		    Thread.sleep(1000);
+		    driver.findElement(By.linkText("IPÓëMAC°ó¶¨")).click();
+		    Thread.sleep(1000);
+		    driver.findElement(By.id("btn_add")).click();
+		    driver.findElement(By.id("ip")).clear();
+		    driver.findElement(By.id("ip")).sendKeys("1.1.1.1");
+		    driver.findElement(By.id("mac")).clear();
+		    driver.findElement(By.id("mac")).sendKeys("aa:bb:cc:dd:ee:ff");
+		    driver.findElement(By.id("submit")).click();
+		    Thread.sleep(2000);
+		    driver.findElement(By.xpath("/html/body/div[8]/div[2]/div[4]/a/span/span")).click();
+		    
+		    System.out.println("Step 2:Add Rule Success\n");
+		    
+		    //Edit Rule
+		    driver.findElement(By.name("ck")).click();
+		    driver.findElement(By.id("btn_edit")).click();
+		    driver.findElement(By.id("ip")).clear();
+		    driver.findElement(By.id("ip")).sendKeys("2.2.2.2");
+		    driver.findElement(By.id("mac")).clear();
+		    driver.findElement(By.id("mac")).sendKeys("11:bb:cc:dd:ee:ff");
+		    driver.findElement(By.id("submit")).click();
+		    Thread.sleep(2000);
+		    driver.findElement(By.xpath("/html/body/div[8]/div[2]/div[4]/a/span/span")).click();
+		    System.out.println("Step 3:Edit Rule Success\n");
+		    
+		    //Bind Rule
+		    driver.findElement(By.name("ck")).click();
+		    driver.findElement(By.id("btn_bound")).click();
+		    System.out.println("Step 4:Bind Rule Success\n");
+		    Thread.sleep(2000);
+		    
+		    //Unbind Rule
+		    driver.findElement(By.name("ck")).click();
+		    driver.findElement(By.id("btn_unbound")).click();
+		    System.out.println("Step 5:Unbind Rule Success\n");
+		    Thread.sleep(2000);
+		    
+		    //Del Rule
+		    driver.findElement(By.name("ck")).click();
+		    driver.findElement(By.id("btn_del")).click();
+		    driver.findElement(By.xpath("/html/body/div[8]/div[2]/div[4]/a/span/span")).click();
+		    Thread.sleep(2000);
+		    driver.findElement(By.xpath("/html/body/div[8]/div[2]/div[4]/a/span/span")).click();
+		    System.out.println("Step 6:Environment Restore Success\n");
+		    
+			//Log out 
+		    driver.findElement(By.id("quit")).click();
+		    driver.findElement(By.cssSelector("div.messager-button > a.l-btn")).click();
+		    System.out.println("Step 7:Logout Success\n");
+	  }
+	  
+
+}

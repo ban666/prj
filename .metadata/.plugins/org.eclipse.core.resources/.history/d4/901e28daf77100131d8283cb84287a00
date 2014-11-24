@@ -1,0 +1,9 @@
+package Test1;
+
+import org.testng.annotations.Test;
+
+public class baidu {
+  @Test
+  public void f() {
+  }
+}

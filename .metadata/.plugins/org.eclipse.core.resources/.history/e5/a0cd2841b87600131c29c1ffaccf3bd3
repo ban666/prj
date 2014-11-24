@@ -1,0 +1,36 @@
+#!/bin/sh
+# test1.tcl \
+exec tclsh "$0" ${1+"$@"}
+
+#初始化（读取lib 读取全局变量）
+source "C:\\Users\\ban\\workspace\\Test\\init.tcl"
+
+
+#初始flag为1
+set script_flag 1  
+
+if { [catch { 
+#预置条件
+set TestCaseNo 333
+#测试执行
+proc login {ip {root root} {password}} {
+set cmd [exec "-ssh $root\@$ip]
+$password
+ return 1
+}
+set a [login 192.168.13.13 root netrule123]
+	puts $a
+#结果判断
+	
+	
+	
+	
+} ErrorMessage ]} {
+  set script_flag 0    
+  puts ErrorMessage:$ErrorMessage
+}
+	
+	#Print script report
+
+	return [SetTestcaseResult $TestCaseNo [expr {$script_flag == 1 ? "PASS" : "FAIL"}] ]
+		

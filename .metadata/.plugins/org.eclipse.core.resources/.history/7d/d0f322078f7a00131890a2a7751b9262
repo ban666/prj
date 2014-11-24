@@ -1,0 +1,19 @@
+
+import unittest
+import Python27.ssh
+
+class Test(unittest.TestCase):
+
+
+    def testName(self):
+        ip = '192.168.13.13'
+        cmd = 'uptime'
+        a=ssh.SshLogin(ip,cmd)
+        print a
+        pass
+    
+
+
+if __name__ == "__main__":
+    #import sys;sys.argv = ['', 'Test.testName']
+    unittest.main()

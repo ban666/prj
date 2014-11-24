@@ -1,0 +1,24 @@
+
+proc initlib {ProjectLocation libary} {
+set Location "$ProjectLocation\\$libary"
+puts $Location 
+catch {glob -directory "$ProjectLocation\\$libary" *.tcl} msg
+foreach file $msg {
+source $file
+}
+}
+
+proc StartExcute {ProjectLocation libary} {
+set Location "$ProjectLocation\\$libary"
+puts $Location 
+catch {glob -directory "$ProjectLocation\\$libary" *.app.tcl} msg
+	puts $msg
+foreach file $msg {
+	puts $file
+source $file
+}
+}
+
+
+initlib "C:\\Users\\ban\\workspace\\Test" "Globalinfo"
+initlib "C:\\Users\\ban\\workspace\\Test" "lib"

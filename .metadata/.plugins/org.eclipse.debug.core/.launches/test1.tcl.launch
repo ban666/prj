@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.dltk.tcl.launching.TCLLaunchConfigurationType">
+<stringAttribute key="console_id" value="dltk_1388220769361"/>
+<stringAttribute key="mainScript" value="test1.tcl"/>
+<stringAttribute key="nature" value="org.eclipse.dltk.tcl.core.nature"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Test/test1.tcl"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="E:\tt\report\re"/>
+<stringAttribute key="org.eclipse.dltk.launching.INTERPRETER_CONTAINER" value="org.eclipse.dltk.launching.INTERPRETER_CONTAINER/org.eclipse.dltk.internal.debug.ui.launcher.GenericTclInstallType/tclsh84.exe"/>
+<stringAttribute key="process_factory_id" value="org.eclipse.dltk.launching.scriptProcessFactory"/>
+<stringAttribute key="project" value="Test"/>
+<booleanAttribute key="use_dltk_interactive_console" value="false"/>
+</launchConfiguration>

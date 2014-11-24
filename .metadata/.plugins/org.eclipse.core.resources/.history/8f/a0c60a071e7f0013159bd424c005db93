@@ -1,0 +1,22 @@
+import paramiko
+ 
+def SshLogin (ip,cmd,username='root',password='netrule123',port='22'):
+   ssh = paramiko.SSHClient()
+   ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+   ssh.connect(ip,22,username,password)
+   stdin,stdout,stderr = ssh.exec_command(cmd)
+   a = stdout.readlines()  
+   print a
+   return a
+
+
+def SshPing (ip,cmd,username='root',password='netrule123',port='22'):
+   paramiko.util.log_to_file('paramiko.log')
+   ssh = paramiko.SSHClient()      
+   ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+   ssh.connect(ip,22,username,password)
+   wwww = 'cd wwww'
+   stdin,stdout,stderr = ssh.exec_command(wwww+cmd)
+   a = stdout.readlines()  
+   print a
+   return a

@@ -1,0 +1,32 @@
+#Tcl interpreter builtins for:C:/Tcl/bin/tclsh84.exe
+
+
+#Procedures
+proc auto_load_index {} {}
+proc unknown {args} {}
+proc auto_import {pattern} {}
+proc auto_execok {name} {}
+proc auto_qualify {cmd namespace} {}
+proc auto_load {cmd namespace} {}
+proc tclLog {string} {}
+
+
+#Variables
+set tcl_rcFileName ~/tclshrc.tcl
+set tcl_version 8.4
+set argv0 C:\Users\ban\AppData\Local\Temp\dltk29871.tmp\scripts\builtins.tcl
+set argv 
+set tcl_interactive 0
+set auto_path C:/Tcl/lib/tcl8.4 C:/Tcl/lib
+set errorCode 
+set errorInfo 
+set auto_index(::tcl::tm::list) source C:/Tcl/lib/tcl8.4/tm.tcl
+set auto_index(::tcl::tm::add) source C:/Tcl/lib/tcl8.4/tm.tcl
+set auto_index(::tcl::tm::UnknownHandler) source C:/Tcl/lib/tcl8.4/tm.tcl
+set auto_index(::tcl::tm::remove) source C:/Tcl/lib/tcl8.4/tm.tcl
+set auto_index(::tcl::tm::roots) source C:/Tcl/lib/tcl8.4/tm.tcl
+set env(HOME) C:\Users\ban
+set env(ProgramData) C:\ProgramData
+set env(PROCESSOR_IDENTIFIER) Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+set env(JAVA_HOME) C:\Program Files\Java\jdk1.7.0_17
+set env(ComSpec) C:\Windows\system32\cmd.exe

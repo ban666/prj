@@ -1,0 +1,4 @@
+#!/bin/sh
+# ftp.tcl \
+exec tclsh "$0" ${1+"$@"}
+catch [exec e:\\test\\ftp111.bat] msg

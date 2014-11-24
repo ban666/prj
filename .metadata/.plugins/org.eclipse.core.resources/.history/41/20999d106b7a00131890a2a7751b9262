@@ -1,0 +1,19 @@
+
+proc Capture {interface filter SLocation duration tsharkpath} {
+     set dir [pwd]
+     cd $tsharkpath
+	puts [pwd]
+        set cmd [list exec tshark -i $interface -f $filter -a duration:$duration -V > $SLocation]
+	puts $cmd
+        set Cap [catch {eval $cmd} msg]
+	puts $msg
+	cd $dir
+	return 1
+}
+set c "e:\\test\\2.pcap"
+set b [Capture 3 icmp $c 10 "c:\\program files\\wireshark"]
+puts $b
+
+proc Exsitcheck {filter file} {
+	]
+}

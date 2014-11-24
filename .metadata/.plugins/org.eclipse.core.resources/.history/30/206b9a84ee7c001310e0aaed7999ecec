@@ -1,0 +1,226 @@
+
+package provide RCClient 1.0 
+
+#引入ITCL库
+catch {package require Itcl}
+catch {namespace import -force itcl::*}
+################################################################################
+# 名称:   	全局函数 & 全局变量
+# 内容: 	CopyMore 接收文件函数；Wrong 输出错误函数
+# 时间: 	2008-10-17 
+# 版本:		V1.0
+################################################################################      
+#调试
+set Debug  0  
+set gtrRemotePath $path
+ 
+
+proc Wrong { args } {
+	puts <0,0,0>(错误信息:)$args<END>
+	return 0
+}  
+
+#接收文件 
+proc CopyMore {in out chunk bytes {error {}}} { 
+    global total done
+    incr total $bytes
+    if {([string length $error] != 0)|| [eof $in]} {
+	    set done $total
+	    close $in 
+	    close $out
+    } else { 
+	    fcopy $in $out -command [list CopyMore $in $out $chunk] -size $chunk
+    }
+}
+
+################################################################################
+# 名称:   	GR_Client类封装
+# 内容: 	GetChannelId  	获得socket通道 
+#			constructor     构造函数
+#			GR_eval      	在服务器上执行一个命令,type!=0时,等待并输出远程执行结果 
+#			GR_DownloadFile 获取服务器上的一个文件,type!=0时,等待并输出远程执行结果 
+#			GR_UpdateFile   上传一个文件到远程计算机上，超过需求内容。末实现
+# 时间: 	2008-10-10
+# 版本:		V1.0
+################################################################################
+
+class GR_Client {
+    # socket主机
+    private variable m_host
+    private variable m_port
+    private variable ChannelID 
+    
+    #获得socket通道
+    method GetChannelId {} {
+	    # 若channel未建立，则建立socket 
+	    if {-1 == $ChannelID} {
+		if {[catch { 
+			set ChannelID [socket $m_host $m_port]
+			#设置为按行收发 
+			    fconfigure $ChannelID -buffering line
+		} msg]} { 
+			    Wrong "无效的服务器:主机:$m_host 端口:$m_port,错误信息:\n $msg"	
+			    return ""	    	 
+		    }    		
+	    }
+	    return $ChannelID
+    }
+    
+    #创建一个对象，获得其socket通道
+    constructor {host port} {  
+	    set m_host $host
+	    set m_port $port
+	    set ChannelID "-1" 
+    }  
+    
+    #store the variable in the remote Server
+    method GR_saveVar { { varName gVariable} { varValue "" } } { 
+	global  gtrRemotePath
+	  
+	    #modify the config xml file and save it on PC
+	    set doc [LoadXML "$gtrRemotePath/data.xml"]
+	    set nodes [$doc selectNodes [FormatXML "/root/$varName" 2]] 
+	    if { [$nodes length] == 0 } {
+		    #add the new variable
+		    set nodes [$doc selectNodes "/root"]
+		    set rootNode [$nodes item 0]
+		    if { 1 == [regexp {^[0-9][a-zA-Z_0-9\-]*$} $varName] } {
+			tk_messageBox -message "xml node name should start with letters, invalid node name: $ChildName"
+			exit
+		    }
+
+		set ChildNode [$doc createElement $varName]
+		$ChildNode text $varValue
+		$rootNode appendChild $ChildNode
+			$doc save  "$gtrRemotePath/data.xml"
+			$doc delete
+			
+	    } else {
+		    #the variable has defined, just modify the value
+		    XML_ModText $doc "/root/$varName" $varValue 
+			$doc save  "$gtrRemotePath/data.xml"
+			$doc delete
+	    }
+    }
+    
+    #在服务器上执行一个命令,type!=0时,等待并输出远程执行结果 
+    # 默认等待执行结果
+    # expectResult 函数执行预期结果(根据返回列表第一个元素判断),"null"表示不判定
+    method GR_eval { str {type 1} {expectResult "null"}} {
+			  
+		set ChannelId [GetChannelId]    
+		
+		if {$ChannelId == ""} { return }   
+	    
+		ShowTraceMessage -color black "发送命令: \[ $str \]"
+			      
+	    if { [ catch {puts $ChannelId "$str"} msg ] } {    
+		    Wrong "发送命令$str 失败:$msg" 
+		    return
+	    }
+	    #如果不希望等待返回运行结果
+	    if {$type == 0} { 
+		close $ChannelID
+		    set ChannelID "-1"
+		    return
+	    }
+		
+		#　阻塞等待知道获取结果
+	    gets $ChannelId result
+ 	
+	    # 关闭socket连接(为了避免中间网络出现掉线,而不能继续运行的情况)
+	    close $ChannelID
+	    set ChannelID "-1"
+
+	    if {[string match "FAIL:*" $result ]==1}  { 
+		    return FAIL
+	    } else { 
+			# 打印执行命令的返回信息
+			ShowTraceMessage -color black "返回结果: \{ $result \}\n"
+			
+			if {[regexp -nocase {null} $expectResult]} {
+				return $result
+			} else {
+				set resultArr(ok) "1" ; set resultArr(fail) "0"
+				if {$resultArr([string tolower $expectResult]) != [lindex $result 0]} {
+					set funcName [lindex $str 0]
+					set failMsg "Fail @funcName; Reason:[lindex $result 2];"
+					lappend ::Global::gaAWReason $failMsg
+					
+					return -code error $failMsg
+				}
+			}
+	    }
+    }
+    
+    #获取服务器上的一个文件
+    #参数: RemotePath 	远程计算上路径,即源文件地址
+    #		LocalPath   本地计算机上路径，即保存地址 
+    #   #global...
+    method  GR_DownloadFile {RemotePath LocalPath {type 0}} {
+	#设置为按块收发 
+	set ChannelId [GetChannelId]
+		if {$ChannelId == ""} {return }  
+
+	    fconfigure $ChannelId -buffering line
+	    catch {puts $ChannelId "GR_DownloadFile \$sock $RemotePath"} msg 
+	    if {$msg !="" } {
+		    Wrong "发送命令GR_DownloadFile失败:$msg"  
+		    return 0
+	    } 
+
+		if {[catch {set FilechannelID [open $LocalPath w]} msg]} {  
+			Wrong "GR_DownloadFile打开文件失败.文件名:$LocalPath ,  错误信息:$msg" 
+			return 0
+		}  
+
+		fconfigure $ChannelId -buffering none 
+
+	    #puts $FileSize
+	    
+		global  chunk total done
+		set chunk 1024
+		set total 0
+	  
+
+		#获取文件大小  		
+		gets $ChannelId FileSize
+		#catch {fcopy $ChannelId $FilechannelID -size $FileSize}
+		if {[catch {fcopy $ChannelId $FilechannelID -command [list CopyMore $ChannelId $FilechannelID $chunk] -size $chunk  }]} {
+				Wrong "执行失败.出错命令:GR_DownloadFile $RemotePath $LocalPath :$msg"
+		} else { 
+				if {[string match "执行失败*" $FileSize ]!=0} {
+					Wrong "执行失败.出错命令:GR_DownloadFile $RemotePath $LocalPath \n            远程信息:$FileSize"   
+					return
+				} 
+				#type参数在这里行不通. 因为要等信道发送完成。只能用来去掉返回信息 	
+				if {$type != 0} {
+					puts "执行成功.执行命令:GR_DownloadFile $RemotePath $LocalPath 接收收字节数:$FileSize" 
+				}
+		}
+		 vwait done 
+
+    }
+    
+    #上传一个文件到远程计算机上
+    #参数: RemotePath 	远程计算上路径,即保存地址
+    #		LocalPath   本地计算机上路径，即源文件地址 
+    method  GR_UpdateFile {RemotePath LocalPath} {
+    }
+    
+    #下载一个目录下的所有文件
+    #参数: RemotePath 	远程计算上目录路径,即源目录地址
+    #		LocalPath   本地计算机上目录路径  
+    method  GR_DownloadDir {RemotePath LocalPath} { 
+	    set ChannelId [GetChannelId]
+		if {$ChannelId == ""} {return } 
+		fconfigure $ChannelId -buffering line
+	    catch {puts $ChannelId "GR_DownloadDir \$sock $RemotePath"} msg 
+	    if {$msg !="" } {
+		    Wrong "发送命令GR_DownloadDir失败:$msg" 
+		    return  0
+	    } 
+		gets $ChannelId files
+		puts $files 
+    }            
+}

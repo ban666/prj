@@ -1,0 +1,3 @@
+#!/bin/sh
+# Wireshark.tcl \
+exec tclsh "$0" ${1+"$@"}

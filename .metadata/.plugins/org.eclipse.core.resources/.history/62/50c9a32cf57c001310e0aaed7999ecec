@@ -1,0 +1,84 @@
+#SetResult
+proc SetTestcaseResult { TestCaseNo {Result 1} } {
+    set File $::g_File
+    #open file
+    set ID [open $File RDWR]
+    if {0==[regexp "file*" $ID]} {
+	puts "打开文件失败"
+	return [list 0 {} {}]
+    }
+    #Go to the end
+    read $ID
+    set NowTime [clock format [clock seconds] -format "%Y年%m月%d日 %H:%M:%S"]
+    puts $ID "\n$NowTime\:\: TestCase\:$TestCaseNo Result\:$Result"
+    close $ID
+    return [list 1 {} {}]
+}
+
+#ClearResult
+proc ClearResult {} {
+    set File $::g_File
+    #open file
+    set ID [open $File w+]
+    return [list 1 {} {}]
+}    
+
+#Pingtest
+proc Pingtest {ip {option ""}} {
+	if {[string equal "" $option]} {
+	set pingresult [catch {exec ping $ip} msg]
+	puts $msg
+	if {[regexp TTL $msg]} {
+	set line [lindex [split $msg \n] end-2]
+	set Lostrate [lindex [split $line {}] end-6]	
+	set rate [expr 100-$Lostrate]
+	return [list 1 $Lostrate {}]	
+	}
+		return [list 0 {} {}]
+	} else {
+	set pingresult [catch {eval "exec ping $ip $option"} msg]	
+	puts $msg
+	if {[regexp TTL $msg]} {
+		set line [lindex [split $msg \n] end-2]
+		set Lostrate [lindex [split $line {}] end-6]	
+		set rate [expr 100-$Lostrate]
+		return [list 1 $Lostrate {}]	
+		}
+		return [list 0 {} {}]
+	}
+	
+}
+
+#GetNetcardInfo(IP,MAC,DNS)
+proc GetNetcardInfo {Netcard} {
+set Content [exec ipconfig /all]
+
+regexp "$Netcard:(.*)以太网" $Content temp 
+set mac [string range [lindex [split $temp \n] 4] 35 end]
+set ip [string range [lindex [split $temp \n] 8] 37 end-5]
+set gateway [string range [lindex [split $temp \n] 10] 35 end]
+set mask [string range [lindex [split $temp \n] 9] 35 end]
+set dns [string range [lindex [split $temp \n] 13] 36 end]
+return [list 1 [list $ip $mac] {}]
+}
+
+
+proc GetCfg {} {
+	set scrirptname [info script]
+    regsub ".app.tcl" $scrirptname ".cfg" configFile
+	#打开配置文件 
+	set err [catch {set fileid [open $configFile r]} errMsg]
+	if {$err==1} { 
+	puts"errMsg:$errMsg"
+	return 0
+	} 
+	set rowid 0
+	seek $fileid 0 start
+	set content [read $fileid]
+	set line [split $content \n]    
+	set data [lrange $line 1 end]  
+	set cfgname [split [lindex $line 0] ,]
+	set cfgnum [expr [llength $line]-1]   
+	set datalength [llength [split [lindex $line 0] ,]]
+	return [list $cfgnum $data $cfgname $datalength]
+	}

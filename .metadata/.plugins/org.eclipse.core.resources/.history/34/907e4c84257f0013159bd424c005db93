@@ -1,0 +1,33 @@
+#!/bin/sh
+# ssh.tcl \
+exec tclsh "$0" ${1+"$@"}
+namespace eval Ssh {
+	
+}
+proc SshPs {file {cmd ps} } {
+    if	{[catch {exec python.exe $file $cmd} msg]} {
+	    return [list 0 $msg {}]
+        } else {
+		return [list 1 $msg {}]
+        }
+     
+}
+
+
+proc SshPing {file ip {count 4} {size 64} {timeout 3.0} {interface eth0}} {
+	set cmd "sh ping.sh $ip $count $size $timeout $interface"
+    if	{[catch {exec python.exe $file $cmd} msg]} {
+	    return [list 0 $msg {}]
+	} 
+	regexp {.*\[(.*)\].*} $msg whole rmsg
+	puts $rmsg
+        if {[regexp -nocase ttl $rmsg]} {
+	regexp {([0-9])% packet loss} $rmsg whole rate
+	return [list 1 $rate {}]
+        } elseif {[regexp -nocase unknown $rmsg]} {
+		return [list 0 $rmsg {}]
+        } else {
+	return [list 0 {} {}]
+        }
+     
+}

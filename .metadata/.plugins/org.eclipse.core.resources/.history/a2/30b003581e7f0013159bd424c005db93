@@ -1,0 +1,9 @@
+
+import sys
+import ssh
+        
+ip = '192.168.13.13'
+cmd = 'sh ping.sh 192.168.20.1 4 64 3.0 eth0'
+print cmd
+a=ssh.SshPing(ip,cmd)
+print a

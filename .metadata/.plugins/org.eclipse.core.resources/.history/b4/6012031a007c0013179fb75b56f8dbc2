@@ -1,0 +1,52 @@
+proc SetTestcaseResult { TestCaseNo {Result 1} } {
+    set File $::g_File
+    #open file
+    set ID [open $File RDWR]
+    if {0==[regexp "file*" $ID]} {
+	puts "打开文件失败"
+	return [list 0 {} {}]
+    }
+    #Go to the end
+    read $ID
+    set NowTime [clock format [clock seconds] -format "%Y年%m月%d日 %H:%M:%S"]
+    puts $ID "\n$NowTime\:\: TestCase\:$TestCaseNo Result\:$Result"
+    close $ID
+    return [list 1 {} {}]
+}
+
+proc ClearResult {} {
+    set File $::g_File
+    #open file
+    set ID [open $File RDWR]
+    if {0==[regexp "file*" $ID]} {
+	puts "打开文件失败"
+	return [list 0 {} {}]
+    }
+    puts $ID ""
+    close $ID
+    return [list 1 {} {}]
+}    
+
+proc Pingtest {ip {option ""}} {
+	if {[string equal "" $option]} {
+	set pingresult [catch {exec ping $ip} msg]
+	puts $msg
+	if {[regexp TTL $msg]} {
+	set line [lindex [split $msg \n] end-2]
+	set Lostrate [lindex [split $line {}] end-7]	
+	set rate [expr 100-$Lostrate]
+	return [list 1 $rate {}]	
+	}
+	} else {
+	set pingresult [catch {exec ping $ip $option} msg]	
+	puts $msg
+	if {[regexp TTL $msg]} {
+		set line [lindex [split $msg \n] end-2]
+		set Lostrate [lindex [split $line {}] end-7]	
+		set rate [expr 100-$Lostrate]
+		return [list 1 $rate {}]	
+		}
+	}
+	return [list $status {} {}]
+	
+}

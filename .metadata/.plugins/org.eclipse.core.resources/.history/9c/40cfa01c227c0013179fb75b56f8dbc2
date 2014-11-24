@@ -1,0 +1,11 @@
+import paramiko
+ 
+def SshLogin (ip,cmd,username='root',password='netrule123',port='22'):
+   ssh = paramiko.SSHClient()
+   ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+   ssh.connect(ip,22,username,password)
+   stdin,stdout,stderr = ssh.exec_command(cmd)
+   a = stdout.readlines()  
+   return a
+
+

@@ -1,0 +1,64 @@
+#!/bin/sh
+# test1.tcl \
+exec tclsh "$0" ${1+"$@"}
+
+#初始化（读取lib 读取全局变量）
+source "C:\\Users\\ban\\workspace\\Test\\init.tcl"
+
+#读取CFG
+
+#初始flag为1
+set script_flag 1  
+
+namespace children main {
+if { [catch { 
+#预置条件
+set TestCaseNo cfg(TestCaseNo)
+set TestCaseName cfg(TestCaseName)
+set cfg(no1)
+	puts $cfg(no1)
+	
+puts "TestCase:$TestCaseNo Start"
+#测试执行
+set a [info script]
+regsub ".app.tcl" $a ".cfg" b
+	puts $b
+	set configFile $b
+	#打开配置文件 
+	set err [catch {set fileid [open $configFile r]} errMsg]
+	if {$err==1} { 
+	puts"errMsg:$errMsg"
+	return 0
+	} 
+	set rowid 0
+	seek $fileid 0 start;#定位到文件头
+	set c [read $fileid]
+	puts $c
+	set d [split $c \n]
+	set f [lrange $d 1 end]
+	puts $f
+	set length [expr [llength $d]-1]
+	puts $length
+	set e [split [lindex $d 0] ,]
+	set len [llength $e]
+	foreach ele $f {
+	for {set i 0} {$i<$len} {incr i} {
+		set b [lindex $e $i]
+		set c [lindex [split $ele ,] $i]		
+		set cfg($b) $c
+		puts "cfg($b):[subst $cfg($b)]"
+	}
+	}
+puts $cfg(TestLevel)
+#结果判断
+puts "TestCase:$TestCaseNo End"
+} ErrorMessage ]} {
+  set script_flag 0    
+  puts ErrorMessage:$ErrorMessage
+}
+	
+	#Print script report
+
+	return [SetTestcaseResult $TestCaseNo [expr {$script_flag == 1 ? "PASS" : "FAIL"}] ]
+}		
+main{}

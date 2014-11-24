@@ -1,0 +1,14 @@
+#!/bin/sh
+# ssh.tcl \
+exec tclsh "$0" ${1+"$@"}
+namespace eval Ssh {
+	variable py $::g_python
+}
+proc SshPs {{cmd ps} {file "$py\\case3.py"}} {
+    if	{[catch {exec python.exe $file $cmd} msg]} {
+	    return [list 0 {} {}]
+        } else {
+		return [list 1 $msg {}]
+        }
+     
+}

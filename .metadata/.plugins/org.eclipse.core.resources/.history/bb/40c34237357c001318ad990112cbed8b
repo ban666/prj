@@ -1,0 +1,47 @@
+#!/bin/sh
+# test1.tcl \
+exec tclsh "$0" ${1+"$@"}
+
+#初始化（读取lib 读取全局变量）
+source "C:\\Users\\ban\\workspace\\Test\\init.tcl"
+
+
+
+#初始flag为1
+set script_flag 1  
+
+if { [catch { 
+#预置条件
+set TestCaseNo login
+puts "TestCase:$TestCaseNo Start"
+#测试执行
+set a [info script]
+regsub ".app.tcl" $a ".cfg" b
+	puts $b
+	set configFile $b
+	#打开配置文件 
+	set err [catch {set fileid [open $configFile r]} errMsg]
+	if {$err==1} { 
+	puts"errMsg:$errMsg"
+	return 0
+	} ;
+	#成功打开文件后,一行一行的加以分析
+	set rowid 0;#记录当前行数,程序调试时打印调试信息使 用的 
+	seek $fileid 0 start;#定位到文件头
+	set c [read $fileid]
+	puts $c
+	
+	
+	
+
+#结果判断
+puts "TestCase:$TestCaseNo End"
+} ErrorMessage ]} {
+  set script_flag 0    
+  puts ErrorMessage:$ErrorMessage
+}
+	
+	#Print script report
+
+	return [SetTestcaseResult $TestCaseNo [expr {$script_flag == 1 ? "PASS" : "FAIL"}] ]
+		

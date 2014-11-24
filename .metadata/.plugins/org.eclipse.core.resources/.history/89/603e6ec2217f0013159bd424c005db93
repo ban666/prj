@@ -1,0 +1,3 @@
+#!/bin/sh
+# Sc004.tcl \
+exec tclsh "$0" ${1+"$@"}

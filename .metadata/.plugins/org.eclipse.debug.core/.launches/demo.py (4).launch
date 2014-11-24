@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.dltk.python.launching.PythonLaunchConfigurationType">
+<stringAttribute key="mainScript" value="src/Python27/Scripts/demo/demo.py"/>
+<stringAttribute key="nature" value="org.eclipse.dltk.python.core.nature"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/ssh/src/Python27/Scripts/demo/demo.py"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="process_factory_id" value="org.eclipse.dltk.launching.scriptProcessFactory"/>
+<stringAttribute key="project" value="ssh"/>
+</launchConfiguration>

@@ -1,0 +1,19 @@
+import paramiko
+ 
+
+
+
+ssh = paramiko.SSHClient()
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ssh.connect("192.168.13.13",22,"root", "netrule123")
+cmd = 'ps'   
+stdin,stdout,stderr = ssh.exec_command(cmd)
+a = stdout.readlines()  
+print a
+
+
+for element in a:
+    print(element)
+    
+    
+print type(a[1])

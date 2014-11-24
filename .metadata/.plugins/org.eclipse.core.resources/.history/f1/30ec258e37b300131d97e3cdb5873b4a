@@ -1,0 +1,41 @@
+#!/bin/sh
+# test1.tcl \
+exec tclsh "$0" ${1+"$@"}
+source "d:\\svn1\\workspace\\Test\\init.tcl"
+
+set file "$::g_web_python\\HttpPost.py"
+set a [GetUserList 13 ]
+set temp [split $a :]
+puts $temp
+
+
+#set d [GetUserInfoByUgid 13]
+#puts $d
+#	if {[regexp ugid $arg]} {
+#	set ugid [lindex [split [lindex $temp $x] :] end] 
+#        set ugname   [lindex [split [lindex $temp [expr $x+1]] :] end] 
+#	set userid   [lindex [split [lindex $temp [expr $x+2]] :] end] 
+#	set userip [lindex [split [lindex $temp [expr $x+3]] :] end] 
+#	set username [lindex [split [lindex $temp [expr $x+4]] :] end] 
+#}
+#	
+#set a [GetAllUser]
+#puts $a
+#Add
+#set b [HttpPost "$::g_web_python\\HttpPost.py" AddTime timename:$timename,timedesc:d,week:Mon@Tue,from1:09:00:00,to1:12:00:00,from2:14:00:00,to2:18:00:00]
+#Get
+#set a [GetAllGroupId]
+#set d [AddUserGroup 13 agggg]
+#set d [HttpPost AddUserGroup pugid:2,ugname:aa2]
+#puts $d
+#set e [AddUser 20 ≤‚ ‘ 3.4.5.6]
+#puts $e
+#set d [lindex $a 1]
+#set a [GetTimeList "$::g_web_python\\HttpPost.py"]
+#set c [ClearTime "$::g_web_python\\HttpPost.py"]
+#puts $c
+#set c [ClearGroupTree]
+#puts $c
+#set e [GetTimeId $d $timename]
+#del
+#set c [HttpPost "$::g_web_python\\HttpPost.py" DeleteTime timeid:$e]

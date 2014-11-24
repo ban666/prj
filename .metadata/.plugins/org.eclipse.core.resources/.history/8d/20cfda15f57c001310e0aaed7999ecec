@@ -1,0 +1,3 @@
+#!/bin/sh
+# ssh.tcl \
+exec tclsh "$0" ${1+"$@"}

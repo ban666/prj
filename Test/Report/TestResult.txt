@@ -1,0 +1,497 @@
+
+2014年03月29日 12:11:03 用例编号:TimeGroupAdd_001
+2014年03月29日 12:11:03 测试结果:PASS
+2014年03月29日 12:11:03 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupAdd.app.tcl
+
+
+
+
+2014年03月29日 12:11:05 用例编号:TimeGroupAdd_002
+2014年03月29日 12:11:05 测试结果:PASS
+2014年03月29日 12:11:05 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupAdd.app.tcl
+
+
+
+
+2014年03月29日 12:11:08 用例编号:TimeGroupAdd_003
+2014年03月29日 12:11:08 测试结果:PASS
+2014年03月29日 12:11:08 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupAdd.app.tcl
+
+
+
+
+2014年03月29日 12:11:10 用例编号:TimeGroupAdd_004
+2014年03月29日 12:11:10 测试结果:PASS
+2014年03月29日 12:11:10 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupAdd.app.tcl
+
+
+
+
+2014年03月29日 12:11:13 用例编号:TimeGroupAdd_005
+2014年03月29日 12:11:13 测试结果:PASS
+2014年03月29日 12:11:13 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupAdd.app.tcl
+
+
+
+
+2014年03月29日 12:11:15 用例编号:TimeGroupAdd_006
+2014年03月29日 12:11:15 测试结果:PASS
+2014年03月29日 12:11:15 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupAdd.app.tcl
+
+
+
+
+2014年03月29日 12:11:18 用例编号:TimeGroupAdd_007
+2014年03月29日 12:11:18 测试结果:PASS
+2014年03月29日 12:11:18 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupAdd.app.tcl
+
+
+
+
+2014年03月29日 12:11:21 用例编号:TimeGroupDelete_001
+2014年03月29日 12:11:21 测试结果:PASS
+2014年03月29日 12:11:21 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupDelete.app.tcl
+
+
+
+
+2014年03月29日 12:11:25 用例编号:TimeGroupEdit_001
+2014年03月29日 12:11:25 测试结果:PASS
+2014年03月29日 12:11:25 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupEdit.app.tcl
+
+
+
+
+2014年03月29日 12:11:29 用例编号:TimeGroupEdit_002
+2014年03月29日 12:11:29 测试结果:PASS
+2014年03月29日 12:11:29 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupEdit.app.tcl
+
+
+
+
+2014年03月29日 12:11:33 用例编号:TimeGroupEdit_003
+2014年03月29日 12:11:33 测试结果:PASS
+2014年03月29日 12:11:33 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupEdit.app.tcl
+
+
+
+
+2014年03月29日 12:11:37 用例编号:TimeGroupEdit_004
+2014年03月29日 12:11:37 测试结果:PASS
+2014年03月29日 12:11:37 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupEdit.app.tcl
+
+
+
+
+2014年03月29日 12:11:41 用例编号:TimeGroupEdit_005
+2014年03月29日 12:11:41 测试结果:PASS
+2014年03月29日 12:11:41 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupEdit.app.tcl
+
+
+
+
+2014年03月29日 12:11:45 用例编号:TimeGroupEdit_006
+2014年03月29日 12:11:45 测试结果:PASS
+2014年03月29日 12:11:45 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupEdit.app.tcl
+
+
+
+
+2014年03月29日 12:11:49 用例编号:TimeGroupEdit_007
+2014年03月29日 12:11:49 测试结果:PASS
+2014年03月29日 12:11:49 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule/TimeGroupEdit.app.tcl
+
+
+
+
+2014年03月29日 12:11:50 用例编号:IntranetAdd_001
+2014年03月29日 12:11:50 测试结果:PASS
+2014年03月29日 12:11:50 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet/IntranetAdd.app.tcl
+
+
+
+
+2014年03月29日 12:11:53 用例编号:IntranetAdd_002
+2014年03月29日 12:11:53 测试结果:FAIL
+2014年03月29日 12:11:53 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet/IntranetAdd.app.tcl
+
+
+
+
+2014年03月29日 12:11:55 用例编号:IntranetAdd_003
+2014年03月29日 12:11:55 测试结果:PASS
+2014年03月29日 12:11:55 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet/IntranetAdd.app.tcl
+
+
+
+
+2014年03月29日 12:11:57 用例编号:IntranetAdd_004
+2014年03月29日 12:11:57 测试结果:PASS
+2014年03月29日 12:11:57 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet/IntranetAdd.app.tcl
+
+
+
+
+2014Äê03ÔÂ29ÈÕ 12:12:00 ÓÃÀý±àºÅ:IntranetAdd_001
+2014Äê03ÔÂ29ÈÕ 12:12:00 ²âÊԽá¹û:PASS
+2014Äê03ÔÂ29ÈÕ 12:12:00 ½ű¾Ãû³Æ:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet/IntranetEdit.app.tcl
+
+
+
+
+2014Äê03ÔÂ29ÈÕ 12:12:04 ÓÃÀý±àºÅ:IntranetAdd_002
+2014Äê03ÔÂ29ÈÕ 12:12:04 ²âÊԽá¹û:FAIL
+2014Äê03ÔÂ29ÈÕ 12:12:04 ½ű¾Ãû³Æ:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet/IntranetEdit.app.tcl
+
+
+
+
+2014Äê03ÔÂ29ÈÕ 12:12:08 ÓÃÀý±àºÅ:IntranetAdd_003
+2014Äê03ÔÂ29ÈÕ 12:12:08 ²âÊԽá¹û:PASS
+2014Äê03ÔÂ29ÈÕ 12:12:08 ½ű¾Ãû³Æ:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet/IntranetEdit.app.tcl
+
+
+
+
+2014Äê03ÔÂ29ÈÕ 12:12:11 ÓÃÀý±àºÅ:IntranetAdd_004
+2014Äê03ÔÂ29ÈÕ 12:12:11 ²âÊԽá¹û:PASS
+2014Äê03ÔÂ29ÈÕ 12:12:11 ½ű¾Ãû³Æ:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet/IntranetEdit.app.tcl
+
+
+
+
+2014年04月03日 09:45:18 用例编号:TimeGroupAdd_001
+2014年04月03日 09:45:18 测试结果:PASS
+2014年04月03日 09:45:18 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule\TimeGroupAdd.app.tcl
+
+
+
+
+2014年04月03日 09:45:20 用例编号:TimeGroupAdd_002
+2014年04月03日 09:45:20 测试结果:PASS
+2014年04月03日 09:45:20 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule\TimeGroupAdd.app.tcl
+
+
+
+
+2014年04月03日 09:45:23 用例编号:TimeGroupAdd_003
+2014年04月03日 09:45:23 测试结果:PASS
+2014年04月03日 09:45:23 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule\TimeGroupAdd.app.tcl
+
+
+
+
+2014年04月03日 09:45:26 用例编号:TimeGroupAdd_004
+2014年04月03日 09:45:26 测试结果:PASS
+2014年04月03日 09:45:26 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule\TimeGroupAdd.app.tcl
+
+
+
+
+2014年04月03日 09:45:29 用例编号:TimeGroupAdd_005
+2014年04月03日 09:45:29 测试结果:PASS
+2014年04月03日 09:45:29 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule\TimeGroupAdd.app.tcl
+
+
+
+
+2014年04月03日 09:45:32 用例编号:TimeGroupAdd_006
+2014年04月03日 09:45:32 测试结果:PASS
+2014年04月03日 09:45:32 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule\TimeGroupAdd.app.tcl
+
+
+
+
+2014年04月03日 09:45:35 用例编号:TimeGroupAdd_007
+2014年04月03日 09:45:35 测试结果:PASS
+2014年04月03日 09:45:35 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\TimeModule\TimeGroupAdd.app.tcl
+
+
+
+
+2014年04月22日 09:29:13 用例编号:IntranetAdd_001
+2014年04月22日 09:29:13 测试结果:PASS
+2014年04月22日 09:29:13 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet\IntranetAdd.app.tcl
+
+
+
+
+2014年04月22日 09:29:17 用例编号:IntranetAdd_002
+2014年04月22日 09:29:17 测试结果:PASS
+2014年04月22日 09:29:17 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet\IntranetAdd.app.tcl
+
+
+
+
+2014年04月22日 09:29:22 用例编号:IntranetAdd_003
+2014年04月22日 09:29:22 测试结果:PASS
+2014年04月22日 09:29:22 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet\IntranetAdd.app.tcl
+
+
+
+
+2014年04月22日 09:29:28 用例编号:IntranetAdd_004
+2014年04月22日 09:29:28 测试结果:PASS
+2014年04月22日 09:29:28 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet\IntranetAdd.app.tcl
+
+
+
+
+2014年04月22日 09:49:50 用例编号:UsersAdd_001
+2014年04月22日 09:49:50 测试结果:FAIL
+2014年04月22日 09:49:50 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月22日 09:49:52 用例编号:UsersAdd_002
+2014年04月22日 09:49:52 测试结果:FAIL
+2014年04月22日 09:49:52 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月22日 09:49:54 用例编号:UsersAdd_003
+2014年04月22日 09:49:54 测试结果:FAIL
+2014年04月22日 09:49:54 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月22日 09:49:56 用例编号:UsersAdd_004
+2014年04月22日 09:49:56 测试结果:FAIL
+2014年04月22日 09:49:56 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月22日 09:50:30 用例编号:UsersAdd_001
+2014年04月22日 09:50:30 测试结果:FAIL
+2014年04月22日 09:50:30 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月22日 09:50:33 用例编号:UsersAdd_002
+2014年04月22日 09:50:33 测试结果:PASS
+2014年04月22日 09:50:33 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月22日 09:50:36 用例编号:UsersAdd_003
+2014年04月22日 09:50:36 测试结果:FAIL
+2014年04月22日 09:50:36 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月22日 09:51:31 用例编号:UsersAdd_001
+2014年04月22日 09:51:31 测试结果:FAIL
+2014年04月22日 09:51:31 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月22日 09:51:34 用例编号:UsersAdd_002
+2014年04月22日 09:51:34 测试结果:PASS
+2014年04月22日 09:51:34 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月22日 09:51:37 用例编号:UsersAdd_003
+2014年04月22日 09:51:37 测试结果:FAIL
+2014年04月22日 09:51:37 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月22日 09:52:33 用例编号:UsersAdd_001
+2014年04月22日 09:52:33 测试结果:PASS
+2014年04月22日 09:52:33 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月22日 09:52:36 用例编号:UsersAdd_002
+2014年04月22日 09:52:36 测试结果:FAIL
+2014年04月22日 09:52:36 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月22日 09:52:39 用例编号:UsersAdd_003
+2014年04月22日 09:52:39 测试结果:FAIL
+2014年04月22日 09:52:39 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月22日 09:52:42 用例编号:UsersAdd_004
+2014年04月22日 09:52:42 测试结果:FAIL
+2014年04月22日 09:52:42 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月24日 09:44:59 用例编号:UsersAdd_001
+2014年04月24日 09:44:59 测试结果:PASS
+2014年04月24日 09:44:59 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月24日 09:45:02 用例编号:UsersAdd_002
+2014年04月24日 09:45:02 测试结果:FAIL
+2014年04月24日 09:45:02 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月24日 09:45:05 用例编号:UsersAdd_003
+2014年04月24日 09:45:05 测试结果:FAIL
+2014年04月24日 09:45:05 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月24日 09:45:08 用例编号:UsersAdd_004
+2014年04月24日 09:45:08 测试结果:FAIL
+2014年04月24日 09:45:08 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersAdd.app.tcl
+
+
+
+
+2014年04月24日 09:57:43 用例编号:UsersAdd_001
+2014年04月24日 09:57:43 测试结果:PASS
+2014年04月24日 09:57:43 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersEdit.app.tcl
+
+
+
+
+2014年04月24日 09:57:48 用例编号:UsersAdd_002
+2014年04月24日 09:57:48 测试结果:FAIL
+2014年04月24日 09:57:48 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersEdit.app.tcl
+
+
+
+
+2014年04月24日 09:57:55 用例编号:UsersAdd_003
+2014年04月24日 09:57:55 测试结果:FAIL
+2014年04月24日 09:57:55 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersEdit.app.tcl
+
+
+
+
+2014年04月24日 09:58:00 用例编号:UsersAdd_004
+2014年04月24日 09:58:00 测试结果:FAIL
+2014年04月24日 09:58:00 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersEdit.app.tcl
+
+
+
+
+2014年04月24日 09:59:02 用例编号:UsersEdit_001
+2014年04月24日 09:59:02 测试结果:PASS
+2014年04月24日 09:59:02 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersEdit.app.tcl
+
+
+
+
+2014年04月24日 10:17:39 用例编号:UsersGroupAdd_001
+2014年04月24日 10:17:39 测试结果:PASS
+2014年04月24日 10:17:39 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersGroupAdd.app.tcl
+
+
+
+
+2014年04月24日 10:40:44 用例编号:UsersAdd_001
+2014年04月24日 10:40:44 测试结果:PASS
+2014年04月24日 10:40:44 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersMove.app.tcl
+
+
+
+
+2014年04月24日 10:42:04 用例编号:UsersAdd_001
+2014年04月24日 10:42:04 测试结果:PASS
+2014年04月24日 10:42:04 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersMove.app.tcl
+
+
+
+
+2014年04月24日 10:45:47 用例编号:UsersDel_001
+2014年04月24日 10:45:47 测试结果:FAIL
+2014年04月24日 10:45:47 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersDel.app.tcl
+
+
+
+
+2014年04月24日 10:46:12 用例编号:UsersDel_001
+2014年04月24日 10:46:12 测试结果:PASS
+2014年04月24日 10:46:12 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersDel.app.tcl
+
+
+
+
+2014年04月24日 10:54:12 用例编号:IntranetAdd_001
+2014年04月24日 10:54:12 测试结果:PASS
+2014年04月24日 10:54:12 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet\IntranetAdd.app.tcl
+
+
+
+
+2014年04月24日 10:54:15 用例编号:IntranetAdd_002
+2014年04月24日 10:54:15 测试结果:PASS
+2014年04月24日 10:54:15 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet\IntranetAdd.app.tcl
+
+
+
+
+2014年04月24日 10:54:19 用例编号:IntranetAdd_003
+2014年04月24日 10:54:19 测试结果:PASS
+2014年04月24日 10:54:19 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet\IntranetAdd.app.tcl
+
+
+
+
+2014年04月24日 10:54:22 用例编号:IntranetAdd_004
+2014年04月24日 10:54:22 测试结果:PASS
+2014年04月24日 10:54:22 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet\IntranetAdd.app.tcl
+
+
+
+
+2014年04月24日 10:54:26 用例编号:IntranetAdd_005
+2014年04月24日 10:54:26 测试结果:PASS
+2014年04月24日 10:54:26 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet\IntranetAdd.app.tcl
+
+
+
+
+2014年04月24日 10:57:46 用例编号:IntranetDel_001
+2014年04月24日 10:57:46 测试结果:FAIL
+2014年04月24日 10:57:46 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet\IntranetDel.app.tcl
+
+
+
+
+2014年04月24日 10:58:22 用例编号:IntranetDel_001
+2014年04月24日 10:58:22 测试结果:FAIL
+2014年04月24日 10:58:22 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet\IntranetDel.app.tcl
+
+
+
+
+2014年04月24日 10:58:48 用例编号:IntranetDel_001
+2014年04月24日 10:58:48 测试结果:PASS
+2014年04月24日 10:58:48 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Intranet\IntranetDel.app.tcl
+
+
+
+
+2014年04月24日 11:02:02 用例编号:UsersGroupAdd_001
+2014年04月24日 11:02:02 测试结果:PASS
+2014年04月24日 11:02:02 脚本名称:D:\svn1\workspace\Test\Scripts\HttpPost\Users\UsersGroupDel.app.tcl
+
+
+

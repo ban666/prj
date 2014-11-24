@@ -1,0 +1,27 @@
+#!/bin/sh
+# test1.tcl \
+exec tclsh "$0" ${1+"$@"}
+
+#初始化（读取lib 读取全局变量）
+source "C:\\Users\\ban\\workspace\\Test\\init.tcl"
+
+#读取CFG
+
+	
+       #初始flag为1
+set script_flag 1  
+
+if { [catch { 
+
+::GR_Client TestServer 192.168.20.10 32
+set	b [Capture 3 tcp "e:\\test\\1.txt" 10 "c:\\program files\\wireshark"]
+	puts $b
+set a	[TestServer GR_eval [list GetNetcardInfo ban] 1]
+	puts $a
+
+} ErrorMessage ]} {
+  set script_flag 0    
+  puts ErrorMessage:$ErrorMessage
+}
+	
+	#Print script report

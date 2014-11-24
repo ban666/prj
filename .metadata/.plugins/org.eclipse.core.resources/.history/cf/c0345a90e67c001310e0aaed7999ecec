@@ -1,0 +1,4 @@
+#!/bin/sh
+# ftp.tcl \
+exec tclsh "$0" ${1+"$@"}
+set a [ftp -s:e:\\test\\ftp111.txt]

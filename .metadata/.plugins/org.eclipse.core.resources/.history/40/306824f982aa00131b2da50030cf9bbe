@@ -1,0 +1,8 @@
+#coding=utf-8
+import os,time
+a = open ('f:\\2.txt')
+b = a.readlines()
+a.close
+
+for single in b:
+    print single

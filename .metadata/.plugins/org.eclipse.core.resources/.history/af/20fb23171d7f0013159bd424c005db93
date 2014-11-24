@@ -1,0 +1,18 @@
+
+import sys
+import ssh
+import paramiko
+
+   ip = '192.168.13.13'
+   cmd = 'sh ping.sh 192.168.20.1 1 64 3.0 eth0'
+   username='root'
+   password='netrule123'
+   port='22'
+   ssh = paramiko.SSHClient()      
+   ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+   ssh.connect(ip,22,username,password)
+   wwww = 'cd wwww;' 
+   stdin,stdout,stderr = ssh.exec_command(www+cmd)
+   a = stdout.readlines()  
+   print a
+   return a

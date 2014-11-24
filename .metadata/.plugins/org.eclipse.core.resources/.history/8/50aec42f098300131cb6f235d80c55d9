@@ -1,0 +1,5 @@
+set ::g_sship 192.168.13.13
+set ::g_File "e:\\Result.txt" ; #结果文件保存位置
+set ::g_pro_location "e:\\project\\" ; 
+set ::g_pro_location1 "C:\\Users\\ban\\workspace\\Test" ; #工程存放位置
+set ::g_python "C:\\Users\\ban\\workspace\\PyTest1\\src\\Python27\\Scripts" ; #python脚本存放位置

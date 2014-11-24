@@ -1,0 +1,8 @@
+
+#dupip ÎªTelnetµÄµÇÂ¼IPµØÖ·
+set ::dutip "192.168.13.13"
+
+# this is the default prompt after login.
+#set ::defaultPrompt ""    
+
+set ::logFile "Run0001.log"

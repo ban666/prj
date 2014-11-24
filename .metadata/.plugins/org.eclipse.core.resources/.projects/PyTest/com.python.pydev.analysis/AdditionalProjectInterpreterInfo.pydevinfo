@@ -1,0 +1,66 @@
+-- VERSION_4
+-- START DISKCACHE
+D:\svn1\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\PyTest\com.python.pydev.analysis\v2_indexcache
+Python27.Scripts.ssh|0|D:\svn1\workspace\PyTest\src\Python27\Scripts\ssh.py
+-- END DISKCACHE
+-- START DICTIONARY
+22
+6=Python27.Scripts.TimeGroup.TimeEdit
+7=Python27.Scripts.IPMac.IPMacDel
+12=Python27.Scripts.demo.demo
+1=Python27.Scripts.Subnet.SubnetDel
+21=Python27.Scripts.ssh
+22=Python27.Scripts.TimeGroup.TimeDel
+14=Python27.Scripts.DHCPConfig.DhcpDel
+10=Python27.Scripts.DHCPConfig.DhcpAdd
+16=Python27.Scripts.info
+4=Python27.Scripts.Sshping
+20=Python27.Scripts.web
+17=Python27.Scripts.d1
+5=Python27.Scripts.Subnet.SubnetAdd
+9=Python27.Scripts.TimeGroup.TimeAdd
+13=Python27.Scripts.IPMac.IPMacUnbound
+15=Python27.Scripts.Timeconfig
+2=Python27.Scripts.temp
+3=Python27.Scripts.IPMac.IPMacBound
+11=Python27.Scripts.IPMac.IPMacEdit
+8=Python27.Scripts.IPMac.IPMacAdd
+18=Python27.Scripts.Login
+19=Python27.Scripts.DHCPConfig.DhcpEdit
+-- END DICTIONARY
+-- START TREE 1
+30
+!<m|0|
+a|13|a!11@a!19@a!27@a!35@a!43@a!51@a!59@a!67@a!75@a!83@a!91@a!99@a!107@
+b|2|b!115@b!99@
+bas|4|base_url!123@base_url!131@base_url!139@base_url!147@
+c|1|c!155@
+cmd|2|cmd!19@cmd!35@
+d|0|
+dhc|3|DhcpEdit!162@DhcpDel!162@DhcpAdd!162@
+dri|3|driver!147@driver!123@driver!139@
+e|0|
+end|2|endip!83@endip!155@
+f1|2|f1!51@f1!75@
+f2|2|f2!51@f2!75@
+ip|3|ip!131@ip!43@ip!19@
+ip_|5|IP_MacEdit!162@IP_MacAdd!162@IP_MacBound!162@IP_MacDel!162@IP_MacUnbound!162@
+ipb|2|ipbind!91@ipbind!67@
+log|1|Login!162@
+mac|2|macbind!91@macbind!67@
+mas|3|mask!43@mask!155@mask!83@
+pat|0|
+pwd|1|pwd!131@
+s|1|s!123@
+seg|2|segment!155@segment!83@
+ssh|3|SshLogin!170@SshPing!170@SshChannel!170@
+sta|3|startip!83@startip!155@status!179@
+sub|2|SubnetDel!162@SubnetAdd!162@
+t1|2|t1!51@t1!75@
+t2|2|t2!51@t2!75@
+tim|7|TimeGroupDel!162@TimeGroupAdd!162@timename!75@TimeGroupEdit!162@timedesc!51@timedesc!75@timename!51@
+use|1|username!131@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

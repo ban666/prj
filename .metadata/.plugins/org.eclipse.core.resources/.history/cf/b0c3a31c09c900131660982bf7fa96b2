@@ -1,0 +1,7 @@
+# -*- coding: utf-8 -*-   
+import os
+import sys
+import sipconfig
+
+b=os.popen('python a.py "f:/5.txt" "f:/5.c"')
+print b

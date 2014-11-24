@@ -1,0 +1,44 @@
+import sys , socket , time , traceback , DNS 
+ 
+def getAddr(xhost): 
+  try: 
+    host = str(xhost) 
+  except ValueError: 
+    print(e) 
+ 
+  try : 
+    res = socket.getaddrinfo(host , None) 
+  except socket.herror , e: 
+    print(e) 
+  print(res[0][4]) 
+ 
+def getDNS(servername): 
+  DNS.DiscoverNameServers() 
+ 
+  req = DNS.Request() 
+  ans = req.req(name = servername , qtype = DNS.Type.ANY) 
+ 
+  print(ans.answers) 
+#test of getting infomation of some addr
+
+import sys , socket , time , traceback , DNS
+
+def getAddr(xhost):
+  try:
+ host = str(xhost)
+  except ValueError:
+ print(e)
+
+  try :
+ res = socket.getaddrinfo(host , None)
+  except socket.herror , e:
+ print(e)
+  print(res[0][4])
+
+def getDNS(servername):
+  DNS.DiscoverNameServers()
+
+  req = DNS.Request()
+  ans = req.req(name = servername , qtype = DNS.Type.ANY)
+
+  print(ans.answers)

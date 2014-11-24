@@ -1,0 +1,3 @@
+#!/bin/sh
+# temp.tcl \
+exec tclsh "$0" ${1+"$@"}

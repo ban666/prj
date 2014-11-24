@@ -1,0 +1,48 @@
+
+proc Capture {interface filter SLocation duration tsharkpath {V 0}} {
+     set dir [pwd]
+     cd $tsharkpath
+	puts [pwd]
+	if {$V==1} {
+        set cmd [list tshark -i $interface -f $filter -a duration:$duration -V > $SLocation]
+	}
+	set cmd "tshark -i $interface -f $filter -a duration:$duration > $SLocation"
+	puts $cmd
+	set bat "e:\\test\\Test.bat"
+	Makebat $cmd "e:\\test\\Test.bat"
+	exec "start call "$bat""
+	puts $msg
+	cd $dir
+	return 1
+}
+
+proc Exsitcheck {filter file} {
+	set status 0
+	set Getfile [open $file RDONLY]
+	set Content [split [read $Getfile] \n]
+	foreach line $Content {
+	   if {[regexp $filter $line]} {
+	      set status 1
+	   }		
+	}
+	return $status
+}
+
+proc Makebat {cmd file} {
+      set ChannleId [open $file w+]
+      puts $ChannleId $cmd
+      flush $ChannleId
+      close $ChannleId
+	return 1
+}
+
+
+set c "e:\\test\\2.txt"
+
+set b [Capture 3 icmp $c 10 "c:\\program files\\wireshark"]
+catch {exec ping www.163.com} e
+puts $e
+
+set d [Exsitcheck "192.168.20.10" $c]
+#puts $d
+
